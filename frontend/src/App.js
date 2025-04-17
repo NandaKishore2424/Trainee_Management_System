@@ -11,6 +11,7 @@ import Navbar from './components/Navbar';
 import TraineeDetails from './components/TraineeDetails';
 import TraineeForm from './components/TraineeForm';
 import Home from './components/Home';
+import LandingPage from './components/LandingPage';
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -35,7 +36,7 @@ const App = () => {
         <div className="py-6">
           <Routes>
             {/* Root path redirects to home when logged in, login when not */}
-            <Route path="/" element={currentUser ? <Navigate to="/home" /> : <Navigate to="/login" />} />
+            <Route path="/" element={<LandingPage />} />
 
             {/* Public routes */}
             <Route path="/login" element={<Login />} />
